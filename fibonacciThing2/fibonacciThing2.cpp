@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <ctime>
+#include <limits>
 using namespace std;
 
 string adder(const string& a, const string& b) {
@@ -36,4 +37,8 @@ int main()
     cout << y << "\n";
     clock_t last = clock() - first;
     cout << "The program took " << (float)last / CLOCKS_PER_SEC << " seconds to find the " << n << "th term";
+    cout << "The program took " << (float)last / CLOCKS_PER_SEC << " seconds to find the " << n << "th term \n\n";
+    cout << "Press Enter to exit...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
 } 
